@@ -127,3 +127,95 @@ function getRandomColor() {
 
   return colors[Math.floor(Math.random() * colors.length)];
 }
+
+// =========================
+// PHOTO LIGHTBOX
+// =========================
+
+const galleryPhotos =
+    document.querySelectorAll(
+        ".main-photo img, .small-photo img"
+    );
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+
+galleryPhotos.forEach((photo) => {
+
+    photo.addEventListener("click", () => {
+
+        lightboxImage.src = photo.src;
+
+        lightbox.classList.add("show");
+
+    });
+
+});
+
+
+/* CLOSE WITH X */
+
+lightboxClose.addEventListener("click", () => {
+
+    lightbox.classList.remove("show");
+
+});
+
+
+/* CLOSE BY CLICKING OUTSIDE THE PHOTO */
+
+lightbox.addEventListener("click", (event) => {
+
+    if (event.target === lightbox) {
+
+        lightbox.classList.remove("show");
+
+    }
+
+});
+// =========================
+// SCROLL REVEAL
+// =========================
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+function revealOnScroll() {
+
+    revealElements.forEach((element) => {
+
+        const elementTop =
+            element.getBoundingClientRect().top;
+
+        const windowHeight =
+            window.innerHeight;
+
+
+        if (elementTop < windowHeight - 100) {
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+
+// Run once when page loads
+
+revealOnScroll();

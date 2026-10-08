@@ -62,7 +62,7 @@
          BIRTHDAY REVEAL
     ========================== -->
 
-    <section class="birthday-section">
+    <section class="birthday-section reveal">
       <div class="balloon balloon-1">🎈</div>
       <div class="balloon balloon-2">🎈</div>
       <div class="balloon balloon-3">🎈</div>
@@ -87,7 +87,7 @@
          COURSE REP RESPONSIBILITIES
     ========================== -->
 
-    <section class="responsibilities-section">
+    <section class="responsibilities-section reveal">
       <div class="section-heading">
         <span>📋</span>
 
@@ -151,7 +151,7 @@
          BIRTHDAY MESSAGE
     ========================== -->
 
-    <section class="message-section" id="message">
+    <section class="message-section reveal" id="message">
       <div class="message-icon">💌</div>
 
       <p class="section-label"> JUST A LITTLE MESSAGE </p>
@@ -179,11 +179,13 @@
       </div>
     </section>
 
+  
+
     <!-- =========================
-     FEATURED PHOTO
+     PHOTO MEMORIES
 ========================== -->
 
-<section class="memories-section" id="memories">
+<section class="memories-section reveal" id="memories">
 
     <p class="section-label">
         📸 A LITTLE MOMENT
@@ -194,34 +196,62 @@
     </h2>
 
     <p class="section-description">
-        Because one picture is enough to remind me
-        how special today is. 💜
+        A few pictures of the birthday boy himself. 🎂✨
     </p>
 
-    <div class="featured-photo">
+    <div class="photo-gallery">
 
-        <div class="photo-frame">
-
+        <!-- MAIN PHOTO -->
+        <div class="main-photo">
             <img
                 src="images/WhatsApp Image 2026-10-08 at 1.58.05 PM.jpeg"
                 alt="Birthday celebrant"
             >
-
         </div>
 
-        <p class="photo-caption">
-            "The birthday boy himself. 🎂✨"
-        </p>
+        <!-- OTHER PHOTOS -->
+        <div class="small-photo">
+            <img
+                src="images/WhatsApp Image 2026-10-08 at 2.22.03 PM.jpeg"
+                alt="Birthday celebrant"
+            >
+        </div>
+
+        <div class="small-photo">
+            <img
+                src="images/emma-photo-2.jpeg"
+                alt="Birthday celebrant"
+            >
+        </div>
+
+        <div class="small-photo">
+            <img
+                src="images/emma-photo-3.jpeg"
+                alt="Birthday celebrant"
+            >
+        </div>
+
+        <div class="small-photo">
+            <img
+                src="images/emma-photo-4.jpeg"
+                alt="Birthday celebrant"
+            >
+        </div>
 
     </div>
 
+    <p class="photo-caption">
+        The birthday boy himself. 🎂💜
+    </p>
+
 </section>
+
 
     <!-- =========================
          CAKE
     ========================== -->
 
-    <section class="cake-section" id="cake">
+    <section class="cake-section reveal" id="cake">
       <div class="cake-confetti">✨ 🎉 ✨ 🎉 ✨</div>
 
       <p class="section-label">🎂 ONE LAST TASK...</p>
@@ -283,6 +313,24 @@
 
       <strong> Happy Birthday Once Again! 🎂💜 </strong>
     </footer>
+
+    <!-- =========================
+     PHOTO LIGHTBOX
+========================== -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">
+        &times;
+    </button>
+
+    <img
+        src=""
+        alt="Enlarged birthday photo"
+        id="lightboxImage"
+    >
+
+</div>
 
     <script src="script.js"></script>
   </body>
